@@ -100,7 +100,7 @@ exports.adminRequired = (req, res, next) => {
         next();
     } else {
         console.log('Prohibited route: the logged in user is not an administrator.');
-        res.send(403);
+        res.sendStatus(403);
     }
 };
 
@@ -116,7 +116,7 @@ exports.adminOrMyselfRequired = (req, res, next) => {
         next();
     } else {
         console.log('Prohibited route: it is not the logged in user, nor an administrator.');
-        res.send(403);
+        res.sendStatus(403);
     }
 };
 
